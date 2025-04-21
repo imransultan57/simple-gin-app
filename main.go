@@ -1,11 +1,12 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
 	"session20-gin-app/handlers"
 	"session20-gin-app/middlewares"
+
+	"github.com/gin-gonic/gin"
 )
 
 // go build -o myapp main.go
@@ -21,7 +22,7 @@ func main() {
 
 	r := gin.Default() // default router for gin
 
-	r.GET("/status", PingHandler)
+	r.GET("/state", PingHandler)
 
 	// We will create crud route
 	users := make([]handlers.User, 0)
